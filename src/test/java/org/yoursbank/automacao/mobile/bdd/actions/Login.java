@@ -1,6 +1,6 @@
 package org.yoursbank.automacao.mobile.bdd.actions;
 
-import org.yoursbank.automacao.mobile.bdd.pages.Cadastro.Responsible.signUp;
+import org.yoursbank.automacao.mobile.bdd.pages.Cadastro.signUp;
 import org.yoursbank.automacao.mobile.bdd.pages.LoginPage;
 import org.yoursbank.automacao.mobile.bdd.pages.MasterPageFactory;
 

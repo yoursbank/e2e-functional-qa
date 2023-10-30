@@ -30,7 +30,7 @@ public class AppiumDriverHelper {
     }
 
     public static URL getURL() throws MalformedURLException {
-        return new URL("http://192.168.100.56:4723/wd/hub");
+        return new URL("http://172.24.112.1:4723/wd/hub");
     }
 
     public static AppiumDriver getDriver() {
