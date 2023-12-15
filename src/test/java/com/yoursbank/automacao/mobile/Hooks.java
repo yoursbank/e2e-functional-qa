@@ -1,17 +1,20 @@
-package org.yoursbank.automacao.mobile.bdd;
+package com.yoursbank.automacao.mobile;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 
 @Slf4j
 public class Hooks {
     private static AppiumDriverLocalService server;
+
+    @Getter
     public static AppiumDriver driver;
 
     @BeforeAll
@@ -38,23 +41,19 @@ public class Hooks {
 
     }
 
-    @Before
+    @BeforeEach
     public void setUpDriver() {
 
         log.info("Inicializando o driver");
         driver = AppiumDriverHelper.getDriver();
     }
 
-    @After
+    @AfterEach
     public void tearDownDriver() {
-
+        log.info("Finalizando o driver");
         if (driver != null) driver.quit();
         driver = null;
 
-    }
-
-    public static AppiumDriver getDriver() {
-        return driver;
     }
 
 }

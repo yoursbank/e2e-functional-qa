@@ -1,4 +1,4 @@
-package org.yoursbank.automacao.mobile.bdd;
+package com.yoursbank.automacao.mobile;
 
 public class Constants {
 
